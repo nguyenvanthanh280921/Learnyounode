@@ -7,7 +7,6 @@ https://github.com/workshopper/learnyounode
 ```js
 console.log("HELLO WORLD");
 ```
-
 ## Baby steps
 
 - Viết một chương trình nhập một hoặc nhiều số đầu vào qua tham số dòng lệnh và in tổng của chúng ra giao diện dòng lệnh (stdout).
