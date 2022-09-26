@@ -1,2 +1,2 @@
 # Learnyounode
-![Image](https://prnt.sc/KIc3e6jVeqiy)
+[Image](https://prnt.sc/KIc3e6jVeqiy)
