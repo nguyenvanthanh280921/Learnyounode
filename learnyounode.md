@@ -1,5 +1,5 @@
 # Learningnyoumode
-- Là một gói của Node.js 
+https://github.com/workshopper/learnyounode
 
 ## Hello world
 
