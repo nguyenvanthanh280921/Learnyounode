@@ -1,5 +1,6 @@
 # Learningnyoumode
-- Là một gói của Node.js 
+
+https://github.com/workshopper/learnyounode
 
 ## Hello world
 
@@ -7,7 +8,6 @@
 ```js
 console.log("HELLO WORLD");
 ```
-
 ## Baby steps
 
 - Viết một chương trình nhập một hoặc nhiều số đầu vào qua tham số dòng lệnh và in tổng của chúng ra giao diện dòng lệnh (stdout).
@@ -30,10 +30,10 @@ console.log(result);
 
 - Ví dụ: Viết chương trình đếm số dòng mới trong một tệp và xuất nó trong dấu nhắc lệnh
 
-    - Chúng ta có thể sử dụng phương thức `readFileSync()` để đọc nội dung của file
-    - Có thể sử dụng thuộc tính `argv` của đối tượng `process` để tính tổng các giá trị được truyền dưới dạng đối số
-    - Truy cập chỉ mục 2 của `process.argv` để đọc nội dung được truyền dưới dạng đối số thứ ba cho dòng lệnh. Phương thức `readFileSync()` trả về đối tượng đệm khi quá trình đọc hoàn tất
-    - Chúng ta có thể chuyển đổi nội dụng của đối tượng đệm đó thành một chuỗi bằng phương thực `toString()`. Từ đó ta sử dụng phương thức `split()` để chia chuỗi tại mỗi dòng mới `('\n')` và lấy độ dài bằng `.length`.
+  - Chúng ta có thể sử dụng phương thức `readFileSync()` để đọc nội dung của file
+  - Có thể sử dụng thuộc tính `argv` của đối tượng `process` để tính tổng các giá trị được truyền dưới dạng đối số
+  - Truy cập chỉ mục 2 của `process.argv` để đọc nội dung được truyền dưới dạng đối số thứ ba cho dòng lệnh. Phương thức `readFileSync()` trả về đối tượng đệm khi quá trình đọc hoàn tất
+  - Chúng ta có thể chuyển đổi nội dụng của đối tượng đệm đó thành một chuỗi bằng phương thực `toString()`. Từ đó ta sử dụng phương thức `split()` để chia chuỗi tại mỗi dòng mới `('\n')` và lấy độ dài bằng `.length`.
 
 ```js
 const fs = require('fs');
@@ -51,7 +51,7 @@ console.log(str);
 
 - Ví dụ: Viết một chương trình sử dụng một thao tác hệ thống tệp `asynchronous(không đồng bộ)` duy nhất để đọc một tệp và in số dòng mới mà nó chứa vào bảng điều khiển (stdout), tương tự như đang chạy `cat file | wc-l`
 
-    - Chúng ta sẽ sử dụng `fs.readFile()` 
+  - Chúng ta sẽ sử dụng `fs.readFile()`
 
 ```js
  const fs = require('fs')
@@ -67,14 +67,14 @@ console.log(str);
     })
 ```
 - quá trình không đồng bộ cho phép tập lệnh tiếp tục chạy
-- Hàm `readFile()` là phiên bản không đồng bộ của `readFileSync()`. 
+- Hàm `readFile()` là phiên bản không đồng bộ của `readFileSync()`.
 - `readFile()` lấy tên tệp làm tham số đầu tiên và hàm gọi lại làm tham số cuối cùng .
 - Hàm gọi lại nhận 2 tham số , trình xử lý lỗi `err` và tham số dữ liệu là nội dung file của bạn.
 
 ## Filtered LS
 
 - Tạo một chương trình in danh sách các tệp trong một thư mục nhất định, được lọc theo phần mở rộng của tệp. Bạn sẽ được cung cấp tên thư mục làm đối số đầu tiên cho chương trình của mình (ví dụ: '/ path / to / dir /') và một phần mở rộng tệp để lọc làm đối số thứ hai.
-- Danh sách các file lọc được sẽ được in ra giao diện dòng lệnh với mỗi file nằm trên một dòng. 
+- Danh sách các file lọc được sẽ được in ra giao diện dòng lệnh với mỗi file nằm trên một dòng.
 - Phương thức `fs.readdir()` này nhận một tên đường dẫn làm đối số đầu tiên và một cuộc gọi lại làm đối số thứ hai của nó.
 
 ```js
@@ -155,8 +155,8 @@ module.exports = function (directory, extension, callback) {
 ## HTTP Collect
 
 - Viết một chương trình nhận một URL qua tham số đầu tiên và thực hiện một HTTP GET request. Tập kết tất cả dữ liệu từ mày chủ (không chỉ có sự kiện "data" đầu tiên) và sau đó in ra 2 dòng như sau trên giao diện dòng lệnh (stdout).
-    1. Dòng thứ 1: In ra số kí tự nhận được từ máy chủ
-    2. Dòng thứ 2: In ra đầy đủ chuỗi nội dung nhận được từ máy chủ
+  1. Dòng thứ 1: In ra số kí tự nhận được từ máy chủ
+  2. Dòng thứ 2: In ra đầy đủ chuỗi nội dung nhận được từ máy chủ
 ```js
 const http = require('http');
 const bl = require('bl');
@@ -218,8 +218,8 @@ const http = require('http');
 
 > "YYYY-MM-DD hh:mm"
 
-- Với hậu tố là một kí tự xuống dòng. Ngày, tháng, giờ và phút vần thêm 0 để có dạng 2 kí tự. 
-ví dụ: "2022-02-02 17:35".
+- Với hậu tố là một kí tự xuống dòng. Ngày, tháng, giờ và phút vần thêm 0 để có dạng 2 kí tự.
+  ví dụ: "2022-02-02 17:35".
 
 ```js
 const net = require('net');
@@ -285,4 +285,40 @@ server.listen(Number(process.argv[2]));
 
 - Viết một máy chủ trả về dữ liệu JSON khi nhận được một request GET qua đường dẫn '/api/parsetime'. Request này sẽ chưa một chuỗi truy vấn (query string) với một khóa (key) là 'iso', và giá trị là một thông số thời gian ISO (ISO-formate time).
 
-   
+```js
+var http = require('http');
+var url = require('url');
+
+    function parsetime (time) {
+      return {
+        hour: time.getHours(),
+        minute: time.getMinutes(),
+        second: time.getSeconds()
+      };
+    }
+
+    function unixtime (time) {
+      return { unixtime : time.getTime() };
+    }
+
+    var server = http.createServer(function (req, res) {
+      var parsedUrl = url.parse(req.url, true);
+      var time = new Date(parsedUrl.query.iso);
+      var result;
+
+      if (/^\/api\/parsetime/.test(req.url))
+    result = parsetime(time);
+        else if (/^\/api\/unixtime/.test(req.url))
+    result = unixtime(time);
+
+      if (result) {
+        res.writeHead(200, { 'Content-Type': 'application/json' });
+        res.end(JSON.stringify(result));
+      } else {
+        res.writeHead(404);
+        res.end();
+      }
+    })
+    
+    server.listen(Number(process.argv[2]));
+```
