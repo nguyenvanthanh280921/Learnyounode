@@ -136,7 +136,6 @@ module.exports = function (directory, extension, callback) {
 
 ```
 
-
 ## HTTP Client
 
 - Viết một chương trình nhận một URL qua tham số đầu tiên và lấy nội dung của URL đó thông qua HTTP GET request. Sau đó hãy in từng dữ liệu ở mỗi sự kiện của response ra một dòng mới ở giao diện dòng lệnh (stdout).
